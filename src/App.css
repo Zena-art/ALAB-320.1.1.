@@ -1,42 +1,130 @@
+/* Root container */
 #root {
-  max-width: 1280px;
+  border: 2px solid black;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  height: auto; /* Ensure height is auto to fit content */
+  box-sizing: border-box; /* Include padding and border in total width/height */
+  min-height: 100vh; /* Ensure the content takes at least full viewport height */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Homepage container */
+#homepage {
+  border: 2px solid yellow;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Header */
+#header {
+  border: 2px solid blue;
+  padding: 1rem;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  background-color: #007bff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Search bar */
+#search-bar {
+  border: 2px solid green;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0 20px;
+  width: 80%; /* Adjust width to be consistent with other elements */
+  max-width: 400px; /* Set max width to keep it from getting too wide */
+  box-sizing: border-box;
+  outline: none;
 }
 
-.card {
-  padding: 2em;
+#search-bar:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.read-the-docs {
-  color: #888;
+/* Employee list container */
+#employee-list {
+  border: 2px solid purple;
+  display: flex;
+  flex-direction: column; /* Stack employee cards vertically */
+  align-items: center;
+  gap: 20px; /* Space between employee cards */
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included */
+  overflow: auto; /* Prevent overflow */
+  min-height: 200px; /* Ensure enough height for the list */
+}
+
+/* Individual employee card */
+.employee-card {
+  border: 2px solid red;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #f8d7da;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+  min-height: 200px; /* Ensure there's enough height for the card */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  box-sizing: border-box; /* Ensure padding and border are included in size */
+}
+
+.employee-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.employee-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #007bff;
+}
+
+.employee-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.employee-card p {
+  font-size: 1em;
+  margin: 0;
+  text-align: center;
+  color: #555;
+}
+
+/* General button styling */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
